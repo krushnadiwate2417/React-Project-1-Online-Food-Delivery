@@ -1,11 +1,13 @@
 import { LOGO_URL } from "../utils/constants";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import UserContext from "../utils/UserContext";
 
 const Head = () => {
   const [btnName, setbtnName] = useState("Login");
   const onlineStatus = useOnlineStatus();
+  const { loggedIn } = useContext(UserContext);
   return (
     <div className="heading">
       <div className="Logo-image">
@@ -35,6 +37,7 @@ const Head = () => {
           >
             {btnName}
           </button>
+          <li>{loggedIn}</li>
         </ul>
       </div>
     </div>

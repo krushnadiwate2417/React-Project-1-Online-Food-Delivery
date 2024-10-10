@@ -24,7 +24,9 @@ const Card = (props) => {
         src={CDN_IMG_URL + cloudinaryImageId}
       />
       <h3 className="font-bold text-lg mt-4">{name}</h3>
-      <h5 className="mt-2 text-sm text-gray-600">{cuisines.join(", ")}</h5>
+      <h5 className="mt-2 text-sm text-gray-600 text-ellipsis">
+        {cuisines.join(", ")}
+      </h5>
       <ul className="card-list flex gap-2 justify-between text-center mt-2">
         <li>
           <h4 className="font-semibold ">Rating</h4>

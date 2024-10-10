@@ -1,17 +1,18 @@
 import { useState } from "react";
 import MenuItemList from "./MenuItemList";
 
-const MenuTitles = ({ menuData }) => {
-  const [showList, setShowList] = useState(false);
-
-  const handleClick = () => {
-    setShowList(!showList);
-  };
-
+const MenuTitles = ({ menuData, showList, setShowIndex, setCount }) => {
+  let count = 0;
   return (
     <div>
-      <div className=" cursor-pointer w-5/12 m-auto p-4 shadow-lg bg-gray-200 my-4">
-        <div className=" flex justify-between" onClick={handleClick}>
+      <div
+        className=" cursor-pointer w-5/12 m-auto p-4 shadow-lg bg-gray-200 my-4"
+        onClick={() => {
+          setShowIndex();
+          //setCount();
+        }}
+      >
+        <div className=" flex justify-between">
           <span className="font-bold">
             {menuData.title}({menuData?.itemCards.length})
           </span>

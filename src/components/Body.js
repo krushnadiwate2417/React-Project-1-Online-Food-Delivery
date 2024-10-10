@@ -1,10 +1,11 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import Card, { offerRestro } from "./Card";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import { RESTRO_API } from "../utils/constants";
 import useRestroAPI from "../utils/useRestroAPI";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import UserContext from "../utils/UserContext";
 
 const Body = () => {
   // const list1 = useRestroAPI();
@@ -42,12 +43,15 @@ const Body = () => {
   if (useOnlineStatus() === false) {
     return <h1>YOU are OFFLINE ! CHECK internet.</h1>;
   }
+  const { loggedIn, setUserName } = useContext(UserContext);
 
-  if (list1.length === 0) {
-    return <Shimmer />;
-  }
+  // if (list1.length === 0) {
+  //   return <Shimmer />;
+  // }
   // Contional Rendering using Turnary Operator where ?-(then) and : means Otherwise
-  return (
+  return list1.length === 0 ? (
+    <Shimmer />
+  ) : (
     <div className="body">
       <div className="filter">
         <div>
@@ -104,6 +108,14 @@ const Body = () => {
         >
           Top Rated Resto
         </button>
+        <label>Change UserName Live : </label>
+        <input
+          className="border border-black"
+          value={loggedIn}
+          onChange={(e) => {
+            setUserName(e.target.value);
+          }}
+        />
       </div>
       <div className="resContainer">
         {filteredRestro.map((restro) => (
