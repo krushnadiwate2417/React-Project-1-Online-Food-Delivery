@@ -18,7 +18,9 @@ const MenuTitles = ({ menuData, showList, setShowIndex, setCount }) => {
           </span>
           <span>⬇️</span>
         </div>
-        <div>{showList && <MenuItemList items={menuData?.itemCards} />}</div>
+        <div className="cursor-default">
+          {showList && <MenuItemList items={menuData?.itemCards} />}
+        </div>
       </div>
     </div>
   );

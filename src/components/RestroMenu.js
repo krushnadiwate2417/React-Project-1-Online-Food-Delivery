@@ -28,6 +28,8 @@ const RestroMenu = () => {
         "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
     );
 
+  console.log(categories);
+
   return (
     <div className="w-full text-center">
       <div className="w-5/12 m-auto p-4 flex justify-between border-b border-solid border-black">
