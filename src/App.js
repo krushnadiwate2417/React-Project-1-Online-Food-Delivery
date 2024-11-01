@@ -14,6 +14,7 @@ import { Provider } from "react-redux";
 import appStore from "./redux/appStore";
 import Cart from "./components/Cart";
 import MindCards from "./components/MindCards";
+import Billing from "./components/Billing";
 
 const Grocery = lazy(() => import("./components/Grocery"));
 
@@ -77,6 +78,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/mindFood/:foodid",
         element: <MindCards />,
+      },
+      {
+        path: "/billing",
+        element: <Billing />,
       },
     ],
     errorElement: <Error />,

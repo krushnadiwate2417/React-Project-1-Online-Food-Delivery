@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import MenuItemList from "./MenuItemList";
 import { clearCart } from "../redux/cartSlice";
+import { Link } from "react-router-dom";
 
 const Cart = () => {
   const cartItems = useSelector((store) => store.cart.items);
@@ -23,7 +24,13 @@ const Cart = () => {
     <div>
       <div className="w-full text-center">
         {cartItems.length === 0 ? (
-          <div className="font-bold text-2xl mt-4 p-4">Cart is Empty</div>
+          <div className="font-bold text-2xl mt-4 p-4">
+            Cart is Empty{" "}
+            <img
+              className="empty-cart-image"
+              src="https://static.vecteezy.com/system/resources/previews/016/462/240/non_2x/empty-shopping-cart-illustration-concept-on-white-background-vector.jpg"
+            />
+          </div>
         ) : (
           <div className="font-bold text-2xl mt-4 p-4">Cart</div>
         )}
@@ -43,7 +50,7 @@ const Cart = () => {
           <div className="w-9/12 m-auto">
             <MenuItemList items={cartItems} />
           </div>
-          <div className=" border-t-2 mt-4 w-5/12 m-auto">
+          <div className=" border-t-2 mt-4 w-7/12 m-auto">
             <h1 className="font-bold text-lg text-center">Bill</h1>
             <div className="flex justify-between list-none w-full">
               <div>
@@ -62,9 +69,11 @@ const Cart = () => {
                 </h2>
               </div>
             </div>
-            <button className=" checkout text-center w-full mt-4 p-3 font-bold rounded-3xl border-black">
-              Proceed to Checkout
-            </button>
+            <Link to={"/billing"}>
+              <button className=" checkout text-center w-full mt-4 p-3 font-bold rounded-3xl border-black">
+                Proceed to Checkout
+              </button>
+            </Link>
           </div>
         </div>
       )}
