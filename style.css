@@ -228,3 +228,30 @@ a:-webkit-any-link {
   font-size: medium;
   border-radius: 15px;
 }
+
+.cart-full-page {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+}
+
+.clear-cart {
+  border: 1px solid black;
+}
+
+.checkout {
+  border: 1px solid black;
+}
+
+.clear-cart:hover {
+  background-color: black;
+  color: white;
+  transition: ease-in-out 0.1s;
+}
+
+.checkout:hover {
+  background-color: black;
+  color: white;
+  transition: ease-in-out 0.1s;
+}

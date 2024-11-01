@@ -12,3 +12,12 @@ export const RESTRO_API =
 
 export const MENU_IMG_ID =
   "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_300,h_300,c_fit/";
+
+export const WHATSONMIND_IMG_ID =
+  "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/";
+
+export const LINK_TO_WHATSONMIND =
+  "https://www.swiggy.com/dapi/restaurants/list/v5?lat=18.5204303&lng=73.8567437&collection=";
+
+export const REST_OF_THE_LINK_OF_WHATSONMIND =
+  "&tags=layout_breakfastcampaign&sortBy=&filters=&type=rcv2&offset=0&page_type=null";

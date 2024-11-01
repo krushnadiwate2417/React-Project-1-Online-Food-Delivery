@@ -6,6 +6,7 @@ import { RESTRO_API } from "../utils/constants";
 import useRestroAPI from "../utils/useRestroAPI";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import UserContext from "../utils/UserContext";
+import WhatsOnMind from "./WhatsOnMind";
 
 const Body = () => {
   // const list1 = useRestroAPI();
@@ -14,7 +15,6 @@ const Body = () => {
   const [filteredRestro, setFilteredRestro] = useState([]);
 
   const [search, setSearch] = useState("");
-
   // Conditional Rendering
   // if (list1.length === 0) {
   //   return <Shimmer />;
@@ -53,6 +53,7 @@ const Body = () => {
     <Shimmer />
   ) : (
     <div className="body">
+      <WhatsOnMind />
       <div className="filter">
         <div>
           <button
