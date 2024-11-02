@@ -270,7 +270,21 @@ a:-webkit-any-link {
   margin-top: 50px;
 }
 
-.billing-grid > div {
+.item {
   border-bottom: 1px solid black;
+  padding: 10px;
+}
+
+.select {
+  border: 1px solid black;
+  width: 200px;
+}
+
+.card-input {
+  border: 1px solid black;
+}
+
+.cashdelivery {
+  border: none;
   padding: 10px;
 }

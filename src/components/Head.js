@@ -11,6 +11,11 @@ const Head = () => {
   const { loggedIn } = useContext(UserContext);
   const cartItems = useSelector((store) => store.cart.items);
   console.log(cartItems);
+
+  const loginFunc = () => {
+    setbtnName("Logout");
+  };
+
   return (
     <div className="heading">
       <div className="Logo-image">
@@ -37,12 +42,11 @@ const Head = () => {
           <button
             className="head-login"
             onClick={() => {
-              btnName === "Login" ? setbtnName("Logout") : setbtnName("Login");
+              btnName === "Login" ? loginFunc() : setbtnName("Login");
             }}
           >
             {btnName}
           </button>
-          <li>{loggedIn}</li>
         </ul>
       </div>
     </div>
