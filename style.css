@@ -288,3 +288,78 @@ a:-webkit-any-link {
   border: none;
   padding: 10px;
 }
+
+.loginPlusbill {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+}
+
+.status {
+  position: absolute;
+}
+
+.online {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: rgb(16, 209, 16);
+  color: rgb(16, 209, 16);
+}
+
+.offline {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: red;
+  color: red;
+}
+
+.actualEmailImage {
+  border-radius: 50px;
+}
+
+.emailImage-div {
+  height: 35px;
+  width: 35px;
+}
+
+.nameLogo {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+}
+
+.head-login {
+  border: 1px solid black;
+  border-radius: 0%;
+}
+
+.loginForm {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.inputItem {
+  border: 1px solid black;
+  width: fit-content;
+  justify-self: center;
+}
+
+.loginFormBtn {
+  border: 1px solid black;
+  width: fit-content;
+  padding: 10px;
+  justify-self: center;
+  border-radius: 15px;
+  cursor: pointer;
+  background-color: rgb(255, 81, 0);
+  color: white;
+}
+
+.loginFormBtn:hover {
+  color: rgb(255, 81, 0);
+  background-color: white;
+}

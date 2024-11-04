@@ -15,6 +15,7 @@ import appStore from "./redux/appStore";
 import Cart from "./components/Cart";
 import MindCards from "./components/MindCards";
 import Billing from "./components/Billing";
+import LoginForm from "./components/LoginForm";
 
 const Grocery = lazy(() => import("./components/Grocery"));
 
@@ -82,6 +83,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/billing",
         element: <Billing />,
+      },
+      {
+        path: "/login",
+        element: <LoginForm />,
       },
     ],
     errorElement: <Error />,
