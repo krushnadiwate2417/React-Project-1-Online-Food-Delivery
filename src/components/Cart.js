@@ -15,12 +15,15 @@ const Cart = () => {
 
   let arr = [];
   cartItems.map((item) => {
-    arr.push(item?.card?.info?.price);
+    arr.push(
+      item?.card?.info?.price ||
+        item?.card?.info?.variantsV2?.pricingModels[0]?.price
+    );
   });
 
   let total = 0;
   for (let i = 0; i < arr.length; i++) {
-    total += arr[i];
+    total += Number(arr[i]);
   }
 
   return (
@@ -50,11 +53,19 @@ const Cart = () => {
                 </div>
                 <div>
                   {cartItems.map((item) => {
-                    return <li> Rs. {item?.card?.info?.price / 100}</li>;
+                    return (
+                      <li>
+                        {" "}
+                        Rs.{" "}
+                        {item?.card?.info?.price / 100 ||
+                          item?.card?.info?.variantsV2?.pricingModels[0]
+                            ?.price / 100}
+                      </li>
+                    );
                   })}
                   <h2 className="mt-4 font-bold">
                     Rs.
-                    {arr.length === 0 ? null : total / 100}
+                    {arr.length === 0 ? null : Number(total) / 100}
                   </h2>
                 </div>
               </div>

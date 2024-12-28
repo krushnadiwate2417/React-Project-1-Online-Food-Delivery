@@ -14,6 +14,7 @@ const GoogleSignIn = () => {
     dispatch(changeStatus());
     dispatch(initialLetter(decoded?.email[0]));
     dispatch(image(decoded?.picture));
+    console.log(decoded?.picture);
   };
 
   const handleError = () => {
