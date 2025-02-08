@@ -57,11 +57,12 @@ const Body = () => {
       <div className="filter">
         <div>
           <button
-            className="back-btn hide"
+            className="back-btn hideVisibility"
             id="back"
             onClick={() => {
+              setSearch("")
               const removeClass2 = document.getElementById("back");
-              removeClass2.classList.add("hide");
+              removeClass2.classList.add("hideVisibility");
               const backList = list1;
               setFilteredRestro(backList);
             }}
@@ -83,7 +84,7 @@ const Body = () => {
             className="searchBtn"
             onClick={(res) => {
               const removeClass = document.getElementById("back");
-              removeClass.classList.remove("hide");
+              removeClass.classList.remove("hideVisibility");
               const filterdSearch = list1.filter((res) => {
                 return res.info.name
                   .toLowerCase()
@@ -99,7 +100,7 @@ const Body = () => {
           className="filter-btn"
           onClick={() => {
             const removeClass = document.getElementById("back");
-            removeClass.classList.remove("hide");
+            removeClass.classList.remove("hideVisibility");
             const filterList = filteredRestro.filter(
               (res) => res.info.avgRating > 4
             );

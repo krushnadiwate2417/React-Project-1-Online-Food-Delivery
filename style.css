@@ -11,7 +11,8 @@
 }
 
 .Logo-image > img {
-  width: 200px;
+  width: 150px;
+  padding: 30px;
 }
 .list-container {
   display: flex;
@@ -30,9 +31,14 @@
   cursor: pointer;
 }
 
-.list-container > ul > li {
+.listHeadings {
   list-style: none;
   margin: 10px;
+  font-weight: bold;
+  background-color: white;
+  background: linear-gradient(rgb(2, 4, 123),rgb(93, 2, 205));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 a:-webkit-any-link {
@@ -70,6 +76,7 @@ a:-webkit-any-link {
   flex-wrap: wrap;
   gap: 10px;
   justify-content: space-evenly;
+  margin: 20px 100px;
 }
 
 .card {
@@ -112,47 +119,66 @@ a:-webkit-any-link {
 .back-btn {
   width: 120px;
   height: 50px;
-  border-radius: 30px;
-  border: 1px solid white;
+  
+  border: 2px solid;
+  background: linear-gradient(rgb(2, 4, 123),rgb(93, 2, 205));
+  -webkit-background-clip: text;
+  color: transparent;
+  border-image-source: linear-gradient(rgb(2, 4, 123),rgb(93, 2, 205));
+  border-image-slice: 1;
   font-size: 1.2rem;
   font-weight: bold;
   cursor: pointer;
 }
 
 .back-btn:hover {
-  border: 1px solid black;
-  transition: 0.1s ease-in;
+  background-image: linear-gradient(rgb(2, 4, 123),rgb(93, 2, 205));
+color: white;
+-webkit-background-clip: border-box;
+  background-clip: border-box;
 }
 
 .searchBtn {
-  margin-left: 10px;
-  width: 120px;
+  width: 140px;
   height: 50px;
-  border-radius: 30px;
-  border: 1px solid white;
-  font-size: 1.2rem;
+  background-color: white;
+  border: 2px solid;
+  background: linear-gradient(rgb(2, 4, 123),rgb(93, 2, 205));
+  -webkit-background-clip: text;
+  color: transparent;
+  border-image-source: linear-gradient(rgb(2, 4, 123),rgb(93, 2, 205));
+  border-image-slice: 1;
   font-weight: bold;
   cursor: pointer;
+  margin-left: 10px;
 }
 
 .searchBtn:hover {
-  border: 1px solid black;
-  transition: 0.1s ease-in;
+background-image: linear-gradient(rgb(2, 4, 123),rgb(93, 2, 205));
+color: white;
+-webkit-background-clip: border-box;
+  background-clip: border-box;
 }
 
 .filter-btn {
   width: 180px;
   height: 50px;
-  border-radius: 30px;
-  border: 1px solid white;
-  font-size: 1.2rem;
+  background-color: white;
+  border: 2px solid;
+  background: linear-gradient(rgb(2, 4, 123),rgb(93, 2, 205));
+  -webkit-background-clip: text;
+  color: transparent;
+  border-image-source: linear-gradient(rgb(2, 4, 123),rgb(93, 2, 205));
+  border-image-slice: 1;
   font-weight: bold;
   cursor: pointer;
 }
 
 .filter-btn:hover {
-  border: 1px solid black;
-  transition: 0.1s ease-in;
+  background-image: linear-gradient(rgb(2, 4, 123),rgb(93, 2, 205));
+  color: white;
+  -webkit-background-clip: border-box;
+    background-clip: border-box;
 }
 
 .Searchbox {
@@ -211,13 +237,20 @@ a:-webkit-any-link {
   padding-right: 5px;
   padding-top: 3px;
   padding-bottom: 3px;
+  background-image: linear-gradient(rgb(2, 4, 123),rgb(93, 2, 205));
+  color: white;
+  font-weight: bold;
+  border: 1px solid;
 }
 
 .add-button:hover {
   background-color: white;
-  color: black;
+  background: linear-gradient(rgb(2, 4, 123),rgb(93, 2, 205));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   transition: ease-in 0.1s;
-  font-weight: bold;
+  border-image: linear-gradient(rgb(2, 4, 123),rgb(93, 2, 205));
+  border-image-slice: 1;
 }
 
 .cart-length {
@@ -237,21 +270,33 @@ a:-webkit-any-link {
 }
 
 .clear-cart {
-  border: 1px solid black;
+  border: 2px solid;
+  background: linear-gradient(rgb(2, 4, 123),rgb(93, 2, 205));
+  -webkit-background-clip: text;
+  color: transparent;
+  border-image-source: linear-gradient(rgb(2, 4, 123),rgb(93, 2, 205));
+  border-image-slice: 1;
 }
 
 .checkout {
-  border: 1px solid black;
+  border: 2px solid;
+  background: linear-gradient(rgb(2, 4, 123),rgb(93, 2, 205));
+  -webkit-background-clip: text;
+  color: transparent;
+  border-image-source: linear-gradient(rgb(2, 4, 123),rgb(93, 2, 205));
+  border-image-slice: 1;
 }
 
 .clear-cart:hover {
-  background-color: black;
+  border: 2px solid;
+  background:linear-gradient(rgb(2, 4, 123),rgb(93, 2, 205)) ;
   color: white;
   transition: ease-in-out 0.1s;
 }
 
 .checkout:hover {
-  background-color: black;
+  border: 2px solid;
+  background:linear-gradient(rgb(2, 4, 123),rgb(93, 2, 205)) ;
   color: white;
   transition: ease-in-out 0.1s;
 }
@@ -316,7 +361,12 @@ a:-webkit-any-link {
 }
 
 .actualEmailImage {
+  text-align: center;
+  border: 1px solid black;
   border-radius: 50px;
+  font-weight: bold;
+  background-image: linear-gradient(rgb(2, 4, 123),rgb(93, 2, 205));
+  color: white;
 }
 
 .emailImage-div {
@@ -355,11 +405,173 @@ a:-webkit-any-link {
   justify-self: center;
   border-radius: 15px;
   cursor: pointer;
-  background-color: rgb(255, 81, 0);
+  background-image: linear-gradient(rgb(2, 4, 123),rgb(93, 2, 205));
   color: white;
 }
 
-.loginFormBtn:hover {
-  color: rgb(255, 81, 0);
+.signP{
   background-color: white;
+  background: linear-gradient(rgb(2, 4, 123),rgb(93, 2, 205));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.loginFormBtn:hover {
+  background-color: white;
+  background: linear-gradient(rgb(2, 4, 123),rgb(93, 2, 205));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(rgb(2, 4, 123),rgb(93, 2, 205));
+}
+
+.viewMenu{
+  align-self: flex-end;
+}
+
+.billGriding{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.imgMind{
+  height: 100px;
+  width: 100px;
+  max-width: none;
+  border-radius: 50%;
+}
+
+.backBtnMind{
+  width: 140px;
+  border: 1px solid black;
+}
+
+.mindGrid{
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  margin: 20px 150px;
+  padding: 10px;
+  border-radius: 30px;
+  background-image: linear-gradient(rgb(2, 4, 123),rgb(93, 2, 205));
+  color: white;
+
+}
+
+.mindGrid:hover{
+  
+  background-image: linear-gradient(rgb(93, 2, 205),rgb(2, 4, 123));
+}
+
+.mindFlex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.headingMind{
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.headingMind>h2{
+  font-size: xx-large;
+  font-weight: bolder;
+  word-spacing: 2px;
+
+}
+
+.headingMind>h4{
+  font-size: larger;
+  font-weight: bold;
+}
+
+.filter{
+  display: flex;
+  justify-content: space-between;
+  margin-right:150px;
+  margin-left: 150px;
+  border-radius: 25px;
+  border: 2px solid;
+  border-image-source: linear-gradient(rgb(2, 4, 123),rgb(93, 2, 205));
+  border-image-slice: 1;
+}
+
+.mindFlex>div>button{
+  margin-left: 30px;
+  margin-right: 30px;
+  font-size: larger;
+  font-weight: 700;
+}
+
+.mindFlex>div>button:hover{
+  text-shadow: 0 0 10px #ff0, 0 0 20px #ff0, 0 0 30px #ff0, 0 0 40px #ff8c00;
+}
+
+.headLogin{
+  border: 2px solid;
+  padding: 15px;
+  font-size: medium;
+  font-weight: bold;
+  background-image: linear-gradient(rgb(2, 4, 123),rgb(93, 2, 205));
+  color:white;
+  border-image-slice: 1;
+  transition: border-image-source 0.5s ease-in-out;
+}
+
+.headLogin:hover{
+  background-color: white;
+  background: linear-gradient(rgb(2, 4, 123),rgb(93, 2, 205));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-image-source: linear-gradient(rgb(2, 4, 123),rgb(93, 2, 205));
+}
+
+.loginHeadinginForm{
+  ackground-color: white;
+  background: linear-gradient(rgb(2, 4, 123),rgb(93, 2, 205));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hideVisibility{
+  visibility: hidden;
+}
+
+
+.cart-container{
+  position: relative;
+  display: inline-block;
+}
+
+.cartItemsNumber{
+  position: absolute;
+  top: -12px;  /* Adjust for better placement */
+  right: -10px;
+  background-color: black;
+  color: white !important;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 50%;
+  padding: 5px 8px;
+  min-width: 25px;
+  text-align: center;
+}
+
+.mindMainDiv{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.mindShimmerDiv{
+  background-color: #bebcbc;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
 }

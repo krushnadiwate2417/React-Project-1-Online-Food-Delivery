@@ -1,16 +1,26 @@
 import { useDispatch } from "react-redux";
 import { MENU_IMG_ID } from "../utils/constants";
 import { addItems } from "../redux/cartSlice";
+import {ToastContainer,toast} from "react-toastify"
+import "react-toastify/dist/ReactToastify.css";
 
 const MenuItemList = ({ items }) => {
   const dispatch = useDispatch();
 
   const handleAddItem = (item) => {
+    toast.success("Item Added Successfully",{
+      position: "top-right",
+      autoClose:1000,
+      closeOnClick: true,
+      pauseOnHover: true,
+      hideProgressBar:false
+    })
     dispatch(addItems(item));
   };
 
   return (
     <div>
+      <ToastContainer/>
       {items.map((item) => (
         <div
           className=" border-b border-solid border-black shadow-lg text-left flex justify-between"
@@ -34,9 +44,9 @@ const MenuItemList = ({ items }) => {
               src={MENU_IMG_ID + item?.card?.info?.imageId}
             />
             <button
-              className="bg-black text-white rounded-md text-sm m-0 add-button"
-              onClick={() => handleAddItem(item)}
-            >
+              className=" rounded-md text-sm m-0 add-button"
+              onClick={() =>
+                handleAddItem(item)}>
               +ADD
             </button>
           </div>

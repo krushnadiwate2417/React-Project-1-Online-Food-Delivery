@@ -5,6 +5,7 @@ import useOnlineStatus from "../utils/useOnlineStatus";
 import UserContext from "../utils/UserContext";
 import { useSelector } from "react-redux";
 import LoginForm from "./LoginForm";
+import logo from "../imgs/fooderImg.png"
 
 const Head = () => {
   const [btnName, setbtnName] = useState("Login");
@@ -14,8 +15,9 @@ const Head = () => {
   const cartItems = useSelector((store) => store.cart.items);
   const userStatus = useSelector((state) => state.user.userStatus);
   const initialLetter = useSelector((store) => store.user.initialLetter);
-  const emailImage = useSelector((state) => state.user.image);
+  const emailName = useSelector((state) => state.user.image);
   console.log(cartItems);
+  console.log(emailName)
 
   const loginFunc = () => {
     setbtnName("Logout");
@@ -24,29 +26,29 @@ const Head = () => {
   return (
     <div className="heading">
       <div className="Logo-image">
-        <img draggable="false" src={LOGO_URL} />
+        <img className="logo-img" draggable="false" src={logo} />
       </div>
       <div className="list-container">
         <ul>
-          <li>
+          <li className="listHeadings">
             <Link to="/">Home</Link>
           </li>
-          <li>
+          <li className="listHeadings">
             <Link to="/about">About</Link>
           </li>
-          <li>
+          <li className="listHeadings">
             <Link to="/contact">Contact Us</Link>
           </li>
-          <li>
+          {/* <li>
             <Link to="/grocery">Grocery</Link>
-          </li>
-          <li>
+          </li> */}
+          <li className="listHeadings">
             <Link to="/cart">Cart ({cartItems.length} items)</Link>
           </li>
           <li>
             {initialLetter === "" ? (
               <Link to="/login">
-                <btn>Login</btn>
+                <btn className="headLogin">Login</btn>
               </Link>
             ) : (
               <div>
@@ -61,8 +63,7 @@ const Head = () => {
                           <div className="offline " id="offlineDot"></div>
                         )}
                       </div>
-                      <img
-                        src={emailImage}
+                      <div
                         className="actualEmailImage"
                         onClick={() => {
                           setCount(count + 1);
@@ -71,7 +72,7 @@ const Head = () => {
                             ? btn.classList.add("hide")
                             : btn.classList.remove("hide");
                         }}
-                      />
+                      >{emailName.split("")[0]}</div>
                     </div>
                     <div className="logout-btn">
                       <button className="head-login hide" id="head-btn">

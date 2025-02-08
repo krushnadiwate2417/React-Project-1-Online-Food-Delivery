@@ -36,7 +36,6 @@ const AppLayout = () => {
         <div className="app">
           <Head />
           <Outlet />
-          <Foot />
         </div>
       </UserContext.Provider>
     </Provider>

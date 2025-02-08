@@ -32,7 +32,7 @@ const LoginForm = () => {
     <div>
       <div>
         <form action="" className="loginForm mx-32 mt-9">
-          <h2>{loginOrSignup}</h2>
+          <h2 className="font-bold text-2xl text-center loginHeadinginForm">{loginOrSignup}</h2>
           <input
             placeholder="Phone Number"
             name="PhoneNumber"
@@ -63,19 +63,21 @@ const LoginForm = () => {
           />
         </form>
       </div>
+      <div className="flex justify-center">
       <p>
         or want to{" "}
         <span
-          className=" text-red-400 hover:cursor-pointer hover:underline"
+          className=" signP hover:cursor-pointer hover:underline mt-2 text-center"
           onClick={() => {
             loginOrSignup === "Login" ? handleSignup() : handleLogin();
           }}
         >
-          {loginOrSignup === "Login" ? "Sign Up" : "Login"}
+          <b>{loginOrSignup === "Login" ? "Sign Up" : "Login"}</b>
         </span>
       </p>
+      </div>
 
-      <div>___________ OR ___________</div>
+      <div className="flex justify-center">___________ OR ___________</div>
       <div className=" justify-self-center">
         <GoogleSignIn />
       </div>

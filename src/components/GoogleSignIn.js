@@ -13,7 +13,7 @@ const GoogleSignIn = () => {
     console.log(decoded);
     dispatch(changeStatus());
     dispatch(initialLetter(decoded?.email[0]));
-    dispatch(image(decoded?.picture));
+    dispatch(image(decoded?.name));
     console.log(decoded?.picture);
   };
 

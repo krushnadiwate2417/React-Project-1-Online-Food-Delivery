@@ -37,7 +37,7 @@ const Card = (props) => {
           {sla.deliveryTime} minutes
         </li>
       </ul>
-      <div className=" text-center mt-3 font-bold">
+      <div className="viewMenu text-center mt-3 font-bold">
         {cardHover && <ViewMenu />}
       </div>
     </div>

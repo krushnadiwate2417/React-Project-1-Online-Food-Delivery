@@ -45,6 +45,7 @@ const Cart = () => {
             <div>
               <div className="list-none w-full">
                 <MenuItemList items={cartItems} />
+                <div className="billGriding">
                 <div>
                   {cartItems.map((item) => {
                     return <li> {item?.card?.info?.name}</li>;
@@ -67,6 +68,7 @@ const Cart = () => {
                     Rs.
                     {arr.length === 0 ? null : Number(total) / 100}
                   </h2>
+                </div>
                 </div>
               </div>
             </div>
