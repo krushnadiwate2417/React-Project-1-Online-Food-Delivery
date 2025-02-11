@@ -7,6 +7,7 @@ import useRestroAPI from "../utils/useRestroAPI";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import UserContext from "../utils/UserContext";
 import WhatsOnMind from "./WhatsOnMind";
+import { ToastContainer } from "react-toastify";
 
 const Body = () => {
   // const list1 = useRestroAPI();
@@ -52,6 +53,7 @@ const Body = () => {
   return list1.length === 0 ? (
     <Shimmer />
   ) : (
+    <><ToastContainer/>
     <div className="body">
       <WhatsOnMind />
       <div className="filter">
@@ -132,6 +134,7 @@ const Body = () => {
       </div>
       <div className="LoginForm">Hello World</div>
     </div>
+    </>
   );
 };
 

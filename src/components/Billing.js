@@ -1,9 +1,19 @@
+import { useState,useEffect } from "react";
 import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const Billing = () => {
   // const [checkid, setCheckid] = useState("");
 
+  const [hideBtnOrder,setHideBtnOrder] = useState("hide");
+
   const cartItems = useSelector((store) => store.cart.items);
+  const navigate = useNavigate();
+
+  const handleClick = ()=>{
+    setHideBtnOrder("");
+  }
 
   let arr = [];
   cartItems.map((item) => {
@@ -41,23 +51,17 @@ const Billing = () => {
       </div>
       <div className="billing-grid w-5/12">
         <div className="flex justify-between item">
-          <div
-            onClick={() => {
-              let net = document.getElementById("net");
-              net.classList.remove("hide");
-            }}
-          >
+          <div  className="billIP">
             <input
-              type="checkbox"
+           
+              type="radio"
+              name="myCheckbox"
               id="Check1"
-              // onClick={() => {
-              //   setCheckid("Check1");
-              //   onCheck();
-              // }}
+              onClick={handleClick}
             />
             <label>Net Banking</label>
           </div>
-          <div className="hide" id="net">
+          <div  id="net">
             <select id="select" className="select">
               <option value="Choose Option" className="text-gray-400">
                 ~Choose Option
@@ -73,11 +77,14 @@ const Billing = () => {
           </div>
         </div>
         <div className="flex justify-between item">
-          <div>
+          <div className="billIP">
             <input
-              type="checkbox"
+            
+              type="radio"
               name="myCheckbox"
               id="Check2"
+              onClick={handleClick}
+
               // onClick={() => {
               //   onCheck();
               //   setCheckid("Check2");
@@ -98,11 +105,14 @@ const Billing = () => {
           </div>
         </div>
         <div className="flex justify-between item">
-          <div>
+          <div className="billIP">
             <input
-              type="checkbox"
+            
+              type="radio"
               name="myCheckbox"
               id="Check3"
+              onClick={handleClick}
+
               // onClick={() => {
               //   onCheck();
               //   setCheckid("Check3");
@@ -126,11 +136,13 @@ const Billing = () => {
           </div>
         </div>
         <div className="cashdelivery">
-          <div>
+          <div className="billIP">
             <input
-              type="checkbox"
+              type="radio"
               name="myCheckbox"
               id="Check4"
+              onClick={handleClick}
+
               // onClick={() => {
               //   onCheck();
               //   setCheckid("Check4");
@@ -139,6 +151,18 @@ const Billing = () => {
             <label>Cash on Delivery</label>
           </div>
         </div>
+      </div>
+      <div className={`orderBtn ${hideBtnOrder}`} >
+        <button onClick={()=>{
+          toast.success("Order Placed Successfully",{
+            position: "top-right",
+            autoClose:1000,
+            closeOnClick: true,
+            pauseOnHover: true,
+            hideProgressBar:false
+          })
+          navigate("/")
+        }}>Place Your Order</button>
       </div>
     </div>
   );
