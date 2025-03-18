@@ -27,7 +27,9 @@ const Body = () => {
 
   const fetchData = async () => {
     try {
-      const data = await fetch(RESTRO_API);
+      const data = await fetch(RESTRO_API,{
+        mode: "no-cors"
+      });
       const json = await data.json();
       setList1(
         json.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
@@ -36,7 +38,7 @@ const Body = () => {
         json.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
       );
     } catch (error) {
-      console.log(error);
+      console.log(error)
     }
   };
 
