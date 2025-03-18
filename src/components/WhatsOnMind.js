@@ -30,7 +30,7 @@ const WhatsOnMind = () => {
   },[nextVal])
 
   const apicalling = async () => {
-    const menu = await fetch(RESTRO_API);
+    const menu = await fetch(RESTRO_API,{mode: "no-cors"});
     const mindJson = await menu.json();
     setMindList(mindJson?.data?.cards[0]?.card?.card?.imageGridCards?.info);
   };

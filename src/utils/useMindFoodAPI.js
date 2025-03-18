@@ -9,7 +9,7 @@ const useMindFoodAPI = (foodid) => {
   }, []);
 
   const fetching = async () => {
-    const data = await fetch(RESTRO_API);
+    const data = await fetch(RESTRO_API,{mode: "no-cors"});
     const jsonData = await data.json();
     setFoodInfo(jsonData?.data?.cards[0]?.card?.card?.imageGridCards?.info);
   };
