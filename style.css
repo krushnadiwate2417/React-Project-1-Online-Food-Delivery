@@ -613,3 +613,183 @@ color: white;
 .hide{
   display: none;
 }
+
+/* Your existing CSS */
+/* ... keep all your existing CSS ... */
+
+/* Add these media queries at the end of your CSS file */
+
+/* Mobile Responsive Styles */
+@media screen and (max-width: 768px) {
+  .heading {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .Logo-image > img {
+    width: 120px;
+    padding: 15px;
+  }
+
+  .list-container {
+    width: 100%;
+    padding-right: 0;
+  }
+
+  .list-container > ul {
+    flex-wrap: wrap;
+    gap: 5px;
+    font-size: 1.2rem;
+  }
+
+  .listHeadings {
+    margin: 5px;
+  }
+
+  .head-login {
+    width: 100%;
+    margin: 10px auto;
+    border-radius: 0;
+  }
+
+  .filter {
+    flex-direction: column;
+    margin: 10px 20px;
+    padding: 15px;
+  }
+
+  .resContainer {
+    margin: 10px 20px;
+  }
+
+  .card {
+    width: 160px;
+    height: 320px;
+  }
+
+  .card > img {
+    height: 140px;
+  }
+
+  .Searchbox {
+    width: 200px;
+    margin-bottom: 10px;
+  }
+
+  .cart-full-page {
+    grid-template-columns: 1fr;
+  }
+
+  .empty-cart-image {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .loginPlusbill {
+    grid-template-columns: 1fr;
+  }
+
+  .billGriding {
+    grid-template-columns: 1fr;
+  }
+
+  .mindGrid {
+    margin: 10px 20px;
+  }
+
+  .filter {
+    flex-direction: column;
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+
+  .mindFlex > div > button {
+    margin: 5px;
+    font-size: medium;
+  }
+
+  .mindMainDiv {
+    flex-direction: column;
+  }
+
+  .imgMind{
+    width: 50px;
+    height: 50px;
+  }
+
+  .mindFlex{
+    flex-direction: column;
+  }
+
+  .descMenu{
+    display: -webkit-box;
+  -webkit-line-clamp: 3; /* Limit to 3 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  }
+
+  .restroHeading{
+    margin: 0px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .menuListMainDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .billing-grid {
+    width: 100%;
+  }
+  .loginFormMainDiv{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+}
+
+/* Small Mobile Devices */
+@media screen and (max-width: 480px) {
+  .card {
+    width: 140px;
+    height: 280px;
+  }
+
+  .card > img {
+    height: 120px;
+  }
+
+  .Searchbox {
+    width: 160px;
+    height: 40px;
+    font-size: 0.9rem;
+  }
+
+  .searchBtn, .filter-btn, .back-btn {
+    width: 120px;
+    height: 40px;
+    font-size: 0.9rem;
+  }
+
+  .list-container > ul {
+    font-size: 1rem;
+  }
+
+  .billIP > label {
+    font-size: medium;
+  }
+
+  .orderBtn > button {
+    padding: 10px 15px;
+    font-size: medium;
+  }
+
+
+}

@@ -11,7 +11,7 @@ import { ToastContainer } from "react-toastify";
 
 const Body = () => {
   // const list1 = useRestroAPI();
-  // console.log(list1);
+
   const [list1, setList1] = useState([]);
   const [filteredRestro, setFilteredRestro] = useState([]);
 
@@ -32,9 +32,6 @@ const Body = () => {
       json.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
     setFilteredRestro(
-      json.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
-    );
-    console.log(
       json.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
   };
@@ -106,7 +103,6 @@ const Body = () => {
             const filterList = filteredRestro.filter(
               (res) => res.info.avgRating > 4
             );
-            console.log(filterList);
             setFilteredRestro(filterList);
           }}
         >

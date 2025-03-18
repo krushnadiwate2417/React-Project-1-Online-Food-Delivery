@@ -6,7 +6,7 @@ const MenuTitles = ({ menuData, showList, setShowIndex, setCount }) => {
   return (
     <div>
       <div
-        className=" cursor-pointer w-5/12 m-auto p-4 shadow-lg bg-gray-200 my-4"
+        className=" menuListMainDiv cursor-pointer w-5/12 m-auto p-4 shadow-lg bg-gray-200 my-4"
         onClick={() => {
           setShowIndex();
           //setCount();

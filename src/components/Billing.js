@@ -1,7 +1,8 @@
 import { useState,useEffect } from "react";
-import { useSelector } from "react-redux";
+import { useSelector,useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import { clearCart } from "../redux/cartSlice";
 
 const Billing = () => {
   // const [checkid, setCheckid] = useState("");
@@ -10,6 +11,7 @@ const Billing = () => {
 
   const cartItems = useSelector((store) => store.cart.items);
   const navigate = useNavigate();
+  const dispatch = useDispatch()
 
   const handleClick = ()=>{
     setHideBtnOrder("");
@@ -38,9 +40,7 @@ const Billing = () => {
   // const onCheck = (checkid) => {
   //   let check = document.getElementById(checkid);
   //   if (check.checked) {
-  //     console.log("Chekced" + checkid);
   //   } else {
-  //     console.log("NOt" + checkid);
   //   }
   // };
 
@@ -161,6 +161,7 @@ const Billing = () => {
             pauseOnHover: true,
             hideProgressBar:false
           })
+          dispatch(clearCart())
           navigate("/")
         }}>Place Your Order</button>
       </div>

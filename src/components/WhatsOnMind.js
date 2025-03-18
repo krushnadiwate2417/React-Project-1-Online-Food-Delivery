@@ -14,7 +14,7 @@ const WhatsOnMind = () => {
   }, []);
 
   useEffect(()=>{
-    console.log(nextVal)
+
     if(nextVal > 0){
       setBackState("")
     }
@@ -32,13 +32,11 @@ const WhatsOnMind = () => {
   const apicalling = async () => {
     const menu = await fetch(RESTRO_API);
     const mindJson = await menu.json();
-    console.log("Mind",mindJson?.data?.cards[0]?.card?.card?.imageGridCards?.info);
     setMindList(mindJson?.data?.cards[0]?.card?.card?.imageGridCards?.info);
   };
 
   const fir = mindList.slice(nextVal,nextVal+5)
-  console.log("fir",fir);
-  console.log("inMind",mindList);
+
 
   return (
     <>

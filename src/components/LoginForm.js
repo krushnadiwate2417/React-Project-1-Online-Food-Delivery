@@ -30,7 +30,7 @@ const LoginForm = () => {
 
   return (
     <div>
-      <div>
+      <div className="loginFormMainDiv">
         <form action="" className="loginForm mx-32 mt-9">
           <h2 className="font-bold text-2xl text-center loginHeadinginForm">{loginOrSignup}</h2>
           <input

@@ -8,17 +8,13 @@ const GoogleSignIn = () => {
   const dispatch = useDispatch();
 
   const handleSuccess = (credentialResponse) => {
-    console.log("SIgn in Sucess", credentialResponse);
     const decoded = jwtDecode(credentialResponse?.credential);
-    console.log(decoded);
     dispatch(changeStatus());
     dispatch(initialLetter(decoded?.email[0]));
     dispatch(image(decoded?.name));
-    console.log(decoded?.picture);
   };
 
   const handleError = () => {
-    console.log("Error in signing in");
   };
   return (
     <div>

@@ -47,15 +47,15 @@ const Cart = () => {
                 <MenuItemList items={cartItems} />
                 <div className="billGriding">
                 <div>
-                  {cartItems.map((item) => {
-                    return <li> {item?.card?.info?.name}</li>;
+                  {cartItems.map((item,index) => {
+                    return <li key={index}> {item?.card?.info?.name}</li>;
                   })}
                   <h2 className="mt-4 font-bold">Total</h2>
                 </div>
                 <div>
-                  {cartItems.map((item) => {
+                  {cartItems.map((item,index) => {
                     return (
-                      <li>
+                      <li key={index}>
                         {" "}
                         Rs.{" "}
                         {item?.card?.info?.price / 100 ||
@@ -94,14 +94,14 @@ const Cart = () => {
                 <h1 className="font-bold text-lg text-center">Bill</h1>
                 <div className="flex justify-between list-none w-full">
                   <div>
-                    {cartItems.map((item) => {
-                      return <li> {item?.card?.info?.name}</li>;
+                    {cartItems.map((item,index) => {
+                      return <li key={index}> {item?.card?.info?.name}</li>;
                     })}
                     <h2 className="mt-4 font-bold">Total</h2>
                   </div>
                   <div>
-                    {cartItems.map((item) => {
-                      return <li> Rs. {item?.card?.info?.price / 100}</li>;
+                    {cartItems.map((item,index) => {
+                      return <li key={index}> Rs. {item?.card?.info?.price / 100}</li>;
                     })}
                     <h2 className="mt-4 font-bold">
                       Rs.

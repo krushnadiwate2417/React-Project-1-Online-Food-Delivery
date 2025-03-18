@@ -16,8 +16,6 @@ const Head = () => {
   const userStatus = useSelector((state) => state.user.userStatus);
   const initialLetter = useSelector((store) => store.user.initialLetter);
   const emailName = useSelector((state) => state.user.image);
-  console.log(cartItems);
-  console.log(emailName)
 
   const loginFunc = () => {
     setbtnName("Logout");
@@ -48,11 +46,10 @@ const Head = () => {
           <li>
             {initialLetter === "" ? (
               <Link to="/login">
-                <btn className="headLogin">Login</btn>
+                <button className="headLogin">Login</button>
               </Link>
             ) : (
               <div>
-                <li>
                   <div className="nameLogo">
                     <div className="empty-gird-row"></div>
                     <div className="emailImage-div justify-self-center">
@@ -80,7 +77,6 @@ const Head = () => {
                       </button>
                     </div>
                   </div>
-                </li>
               </div>
             )}
           </li>

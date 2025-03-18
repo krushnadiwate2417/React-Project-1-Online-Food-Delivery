@@ -10,7 +10,6 @@ const RestroMenu = () => {
 
   const [showIndex, setShowIndex] = useState(null);
   //const [count, setCount] = useState(false);
-  // console.log(count);
 
   if (resInfo === null) return <Shimmer />;
 
@@ -28,11 +27,10 @@ const RestroMenu = () => {
         "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
     );
 
-  console.log(categories);
 
   return (
     <div className="w-full text-center">
-      <div className="w-5/12 m-auto p-4 flex justify-between border-b border-solid border-black">
+      <div className=" restroHeading w-5/12 m-auto p-4 flex justify-between border-b border-solid border-black">
         <div>
           <h1 className="text-4xl">{name}</h1>
           <ul className="text-left">

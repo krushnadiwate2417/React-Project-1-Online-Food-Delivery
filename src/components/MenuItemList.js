@@ -36,7 +36,7 @@ const MenuItemList = ({ items }) => {
                   item?.card?.info?.price / 100}
               </div>
             </li>
-            <p className="mb-3 text-xs pl-4">{item?.card?.info?.description}</p>
+            <p className="descMenu mb-3 text-xs pl-4">{item?.card?.info?.description}</p>
           </div>
           <div>
             <img
